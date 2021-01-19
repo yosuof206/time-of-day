@@ -85,3 +85,38 @@
     <!-- END Footer -->
 </body>
 </html>
+<script>
+
+    let myDate = new Date();
+    let myHour = myDate.getHours();
+    let myGreeting="";
+    let myColor="";
+    let myPic="images/";
+    myHour=9;
+    if(myHour >= 5 && myHour<12)
+    {
+        myGreeting = "Good Morning!";
+        myColor="blue";
+        myPic+="morning.jpg";
+    }
+    else if(myHour >= 12 && myHour< 17) {
+    myGreeting = "Good Afternoon?";
+    myColor="Blue";
+    myPic+="afternoon.jpg";
+    }
+    else if(myHour >= 17 && myHour< 23) {
+    myGreeting = "Good evening?";
+    myColor="Red";
+    myPic+="evening.jpg";
+    }
+    else {
+    myGreeting = "Good night?";
+    myColor="Yellow";
+    myPic+="night.pic";
+    }
+
+     document.getElementById('mydiv').innerHTML = myGreeting;
+    document.body.style.backgroundColor=myColor;
+    document.getElementById("mypic").src = myPic;
+
+</script>
